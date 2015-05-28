@@ -78,29 +78,26 @@ public class IntList {
    ** elements of B.  May NOT modify items of A.  Use 'new'. */
   public static IntList catenate(IntList A, IntList B) {
     //TODO:  fill in method
-	
-    return null;
+    if ((A == null) && (B == null)) return null;
+    IntList dummyA = new IntList(0, A);
+    IntList dummyB = new IntList(0, B);
+    IntList dummyC = new IntList(0, null);
+    IntList currC = dummyC;
+    IntList currA = dummyA.tail;
+    IntList currB = dummyB.tail;
+    while (currA != null) {
+    	currC.tail = new IntList(currA.head, null);
+    	currA = currA.tail;
+    	currC = currC.tail;
+    }
+    while (currB != null) {
+    	currC.tail = new IntList(currB.head, null);
+    	currB = currB.tail;
+    	currC = currC.tail;
+    }
+    return dummyC.tail;
+    
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -70,7 +70,7 @@ public class IntListTest {
     public void testCatenate() {
     	IntList L1 = IntList.list(1, 2, 3);
     	IntList L2 = IntList.list(4, 5, 6);
-    	IntList L3 = IntList.dcatenate(L1, L2);
+    	IntList L3 = IntList.catenate(L1, L2);
     	assertEquals(IntList.list(1, 2, 3), L1);
     	assertEquals(IntList.list(4, 5, 6), L2);
     	assertEquals(IntList.list(1, 2, 3, 4, 5, 6), L3);  	
